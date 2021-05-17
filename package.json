@@ -6,7 +6,7 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "tsc --outdir ./dist",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "mocha --reporter spec --require ts-node/register src/**/*.test.ts"
 	},
 	"keywords": [
 		"colors"
@@ -15,5 +15,13 @@
 		"/dist"
 	],
 	"author": "Akash Shyam",
-	"license": "MIT"
+	"license": "MIT",
+	"devDependencies": {
+		"@types/chai": "^4.2.18",
+		"@types/mocha": "^8.2.2",
+		"chai": "^4.3.4",
+		"mocha": "^8.4.0",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.2.4"
+	}
 }
