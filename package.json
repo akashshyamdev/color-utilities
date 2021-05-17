@@ -1,0 +1,18 @@
+{
+	"name": "color-utilities",
+	"version": "1.0.0",
+	"description": "A handy, tiny utility library compatible with typescript. We offer color conversions, color validation, constrast comparison etc",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"colors"
+	],
+	"files": [
+		"/dist"
+	],
+	"author": "Akash Shyam",
+	"license": "MIT"
+}
