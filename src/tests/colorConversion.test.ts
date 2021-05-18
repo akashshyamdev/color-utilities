@@ -1,9 +1,6 @@
-import { hexToRGB, RGBToHex } from '../colorConversion';
+import { hexToHSL, hexToRGB, HSLToHex, HSLToRGB, RGBToHex, RGBToHSL } from '../colorConversion';
 
-import * as mocha from 'mocha';
-import * as chai from 'chai';
-
-const expect = chai.expect;
+import { expect } from 'chai';
 
 describe('Color Conversion', () => {
 	it('Hex To RGB - 6 values', () => {
@@ -14,11 +11,27 @@ describe('Color Conversion', () => {
 		expect(hexToRGB('#fff')).to.equal("rgb('255, 255, 255')");
 	});
 
-	it('RGB to Hex', () => {
+	it('RGB To Hex', () => {
 		expect(RGBToHex(255, 255, 255)).to.equal('#ffffff');
 	});
 
-	it('RGBA to Hex', () => {
-		expect(RGBToHex(255, 255, 255, 2)).to.equal('#ffffff02');
+	it('RGB To HSL', () => {
+		expect(RGBToHSL(255, 255, 255)).to.equal('hsl("0, 0%, 100%")');
+	});
+
+	it('HSL To RGB', () => {
+		expect(HSLToRGB(0, 0, 100)).to.equal('rgb("255, 255, 255")');
+	});
+
+	it('Hex To HSL - 3 values', () => {
+		expect(hexToHSL('#fff')).to.equal('hsl("0, 0%, 100%")');
+	});
+
+	it('Hex To HSL - 6 values', () => {
+		expect(hexToHSL('#ffffff')).to.equal('hsl("0, 0%, 100%")');
+	});
+
+	it('HSL To Hex', () => {
+		expect(HSLToHex(0, 0, 100)).to.equal('#ffffff');
 	});
 });
