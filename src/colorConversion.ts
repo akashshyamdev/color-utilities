@@ -1,4 +1,5 @@
 export type Color = number | string;
+export type ColorFormat = 'hex' | 'rgb' | 'hsl';
 
 /**
  * Converts a hex string into RGB
