@@ -22,7 +22,7 @@ export function hexToRGB(hex: string) {
 		b = `0x${hex[5]}${hex[6]}`;
 	}
 
-	return `rgb('${+r}, ${+g}, ${+b}')`;
+	return `rgb("${+r}, ${+g}, ${+b}")`;
 }
 
 /**

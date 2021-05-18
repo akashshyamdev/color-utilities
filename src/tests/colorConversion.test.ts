@@ -4,11 +4,11 @@ import { expect } from 'chai';
 
 describe('Color Conversion', () => {
 	it('Hex To RGB - 6 values', () => {
-		expect(hexToRGB('#ffffff')).to.equal("rgb('255, 255, 255')");
+		expect(hexToRGB('#ffffff')).to.equal('rgb("255, 255, 255")');
 	});
 
 	it('Hex To RGB - 3 values', () => {
-		expect(hexToRGB('#fff')).to.equal("rgb('255, 255, 255')");
+		expect(hexToRGB('#fff')).to.equal('rgb("255, 255, 255")');
 	});
 
 	it('RGB To Hex', () => {

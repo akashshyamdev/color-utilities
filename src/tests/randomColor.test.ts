@@ -7,7 +7,7 @@ describe('Random Color', () => {
 	});
 
 	it('RGB Format', () => {
-		expect(generateRandomColor('rgb')).to.match(/rgb\(\'(\d{1,3}), (\d{1,3}), (\d{1,3})\'\)/);
+		expect(generateRandomColor('rgb')).to.match(/rgb\(\"(\d{1,3}), (\d{1,3}), (\d{1,3})\"\)/);
 	});
 
 	it('HSL Format', () => {
