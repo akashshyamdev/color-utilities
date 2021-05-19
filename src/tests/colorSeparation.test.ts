@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { separateHSL, separateRGB } from '../utils/colorSeparation';
+import { separateHSL, separateRGB } from '../colorSeparation';
 
 describe('Color Separation', () => {
 	it('HSL Separation', () => {

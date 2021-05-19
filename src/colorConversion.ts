@@ -104,7 +104,7 @@ export function RGBToHSL(r: number, g: number, b: number) {
  * @param l lightness value
  * @returns a color in RGB format, eg - rgb(20, 20, 20)
  */
-export function HSLToRGB(h: number, s: number, l: number) {
+export function HSLToRGB(h: number, s: number, l: number, returnSeparatedValues = false) {
 	// Must be fractions of 1
 	s /= 100;
 	l /= 100;
@@ -144,6 +144,8 @@ export function HSLToRGB(h: number, s: number, l: number) {
 	r = Math.round((r + m) * 255);
 	g = Math.round((g + m) * 255);
 	b = Math.round((b + m) * 255);
+
+	if (returnSeparatedValues) return [r, g, b];
 
 	return `rgb(${r}, ${g}, ${b})`;
 }

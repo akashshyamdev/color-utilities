@@ -7,10 +7,10 @@ describe('Random Color', () => {
 	});
 
 	it('RGB Format', () => {
-		expect(generateRandomColor('rgb')).to.match(/rgb\(\"(\d{1,3}), (\d{1,3}), (\d{1,3})\"\)/);
+		expect(generateRandomColor('rgb')).to.match(/rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/);
 	});
 
 	it('HSL Format', () => {
-		expect(generateRandomColor('hsl')).to.match(/hsl\(\"\s*(\d+)\s*,\s*(\d+(?:\.\d+)?%)\s*,\s*(\d+(?:\.\d+)?%)\"\)/);
+		expect(generateRandomColor('hsl')).to.match(/hsl\(\s*(\d+)\s*,\s*(\d+(?:\.\d+)?%)\s*,\s*(\d+(?:\.\d+)?%)\)/);
 	});
 });
