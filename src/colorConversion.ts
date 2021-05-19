@@ -32,7 +32,7 @@ export function hexToRGB(hex: string, returnSeparatedValues = false) {
  * @param r - red value
  * @param g - green value
  * @param b - blue value
- * @returns a hexadecimal string with an alpha value in format - #ffffff20
+ * @returns a hexadecimal string, eg - #ffffff
  */
 
 export function RGBToHex(r: Color, g: Color, b: Color) {
@@ -47,6 +47,13 @@ export function RGBToHex(r: Color, g: Color, b: Color) {
 	return `#${r}${g}${b}`;
 }
 
+/**
+ * Converts RGB colors to HSL
+ * @param r red value
+ * @param g green value
+ * @param b blue value
+ * @returns a color in HSL format, eg - hsl(255, 25, 25)
+ */
 export function RGBToHSL(r: number, g: number, b: number) {
 	// Make r, g, and b fractions of 1
 	r /= 255;
@@ -90,6 +97,13 @@ export function RGBToHSL(r: number, g: number, b: number) {
 	return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
+/**
+ * Converts HSL colors to RGB
+ * @param h hue value
+ * @param s saturation value
+ * @param l lightness value
+ * @returns a color in RGB format, eg - rgb(20, 20, 20)
+ */
 export function HSLToRGB(h: number, s: number, l: number) {
 	// Must be fractions of 1
 	s /= 100;
@@ -134,6 +148,11 @@ export function HSLToRGB(h: number, s: number, l: number) {
 	return `rgb(${r}, ${g}, ${b})`;
 }
 
+/**
+ * Converts hex string to HSL
+ * @param hex a hex string
+ * @returns a color in HSL format, eg - hsl(20, 20, 20)
+ */
 export function hexToHSL(hex: string) {
 	// Convert hex to RGB first
 	let r: Color = 0,
@@ -179,6 +198,13 @@ export function hexToHSL(hex: string) {
 	return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
+/**
+ * Converts HSL color to hex
+ * @param h hue value
+ * @param s saturation value
+ * @param l lightness value
+ * @returns a color in hex format, eg - #ffffff
+ */
 export function HSLToHex(h: Color, s: Color, l: Color) {
 	s = (s as number) / 100;
 	l = (l as number) / 100;
