@@ -1,6 +1,13 @@
 import { hexToRGB, ColorFormat, HSLToRGB } from './colorConversion';
 import { separateHSL } from './colorSeparation';
 
+/**
+ * Calculates the contrast against black or white
+ * @param color a color string of one of the supported formats(hex, rgb and hsl)
+ * @param colorFormat the format in which the color is provided(hex, rgb or hsl)
+ * @returns either 'black' or 'white' after calculating the contrast
+ */
+
 export function getContrast(color: string, colorFormat: ColorFormat = 'hex') {
 	let r = 0,
 		b = 0,
