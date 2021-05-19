@@ -6,7 +6,7 @@ export type ColorFormat = 'hex' | 'rgb' | 'hsl';
  * @param hex A hexadecimal string
  * @returns A rgb string in this format - rgb(SOME_VALUE, SOME_VALUE, SOME_VALUE)
  */
-export function hexToRGB(hex: string) {
+export function hexToRGB(hex: string, returnSeparatedValues = false) {
 	let r: Color = 0,
 		g: Color = 0,
 		b: Color = 0;
@@ -22,7 +22,9 @@ export function hexToRGB(hex: string) {
 		b = `0x${hex[5]}${hex[6]}`;
 	}
 
-	return `rgb("${+r}, ${+g}, ${+b}")`;
+	if (returnSeparatedValues) return [r, g, b];
+
+	return `rgb(${+r}, ${+g}, ${+b})`;
 }
 
 /**
@@ -85,7 +87,7 @@ export function RGBToHSL(r: number, g: number, b: number) {
 	s = +(s * 100).toFixed(1);
 	l = +(l * 100).toFixed(1);
 
-	return `hsl("${h}, ${s}%, ${l}%")`;
+	return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
 export function HSLToRGB(h: number, s: number, l: number) {
@@ -129,7 +131,7 @@ export function HSLToRGB(h: number, s: number, l: number) {
 	g = Math.round((g + m) * 255);
 	b = Math.round((b + m) * 255);
 
-	return `rgb("${r}, ${g}, ${b}")`;
+	return `rgb(${r}, ${g}, ${b})`;
 }
 
 export function hexToHSL(hex: string) {
@@ -174,7 +176,7 @@ export function hexToHSL(hex: string) {
 	s = +(s * 100).toFixed(1);
 	l = +(l * 100).toFixed(1);
 
-	return `hsl("${h}, ${s}%, ${l}%")`;
+	return `hsl(${h}, ${s}%, ${l}%)`;
 }
 
 export function HSLToHex(h: Color, s: Color, l: Color) {
