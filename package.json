@@ -1,6 +1,6 @@
 {
   "name": "@akashshyam/color-utilities",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A handy, tiny utility library compatible with typescript. We offer color conversions, color validation, contrast comparison etc",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
