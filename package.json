@@ -1,25 +1,44 @@
 {
-	"name": "color-utilities",
+	"name": "@akashshyam/color-utilities",
 	"version": "1.0.0",
-	"description": "A handy, tiny utility library compatible with typescript. We offer color conversions, color validation, constrast comparison etc",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"description": "A handy, tiny utility library compatible with typescript. We offer color conversions, color validation, contrast comparison etc",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
 	"scripts": {
-		"build": "tsc --outdir ./dist",
-		"test": "mocha --reporter spec --require ts-node/register src/**/*.test.ts"
+		"build": "tsc",
+		"test": "mocha --reporter spec --require ts-node/register src/**/*.test.ts",
+		"prepare": "npm run build",
+		"lint": "eslint",
+		"format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+		"prepublishOnly": "npm run test && npm run lint",
+		"preversion": "npm run lint",
+		"version": "npm run format && git add .",
+		"postversion": "git push && git push --tags"
 	},
 	"keywords": [
-		"colors"
+		"colors",
+		"color-utilities",
+		"color-contrast",
+		"random-color",
+		"color-separation",
+		"color-conversion"
 	],
 	"files": [
-		"/dist"
+		"/lib/**/*"
 	],
 	"author": "Akash Shyam",
 	"license": "MIT",
 	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/preset-env": "^7.14.2",
 		"@types/chai": "^4.2.18",
 		"@types/mocha": "^8.2.2",
+		"airbnb": "^0.0.2",
 		"chai": "^4.3.4",
+		"eslint": "^7.26.0",
+		"eslint-config-airbnb": "^18.2.1",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-prettier": "^8.3.0",
 		"mocha": "^8.4.0",
 		"ts-node": "^9.1.1",
 		"typescript": "^4.2.4"
