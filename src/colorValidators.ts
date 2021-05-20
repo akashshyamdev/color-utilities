@@ -5,9 +5,9 @@
  */
 
 export function validateHex(hex: string) {
-	const re = /^#[a-zA-Z0-9]{6}/;
+  const re = /^#[a-zA-Z0-9]{6}/;
 
-	return re.test(hex);
+  return re.test(hex);
 }
 
 /**
@@ -17,9 +17,9 @@ export function validateHex(hex: string) {
  */
 
 export function validateRGB(rgb: string) {
-	const re = /rgb\(\"(\d{1,3}), (\d{1,3}), (\d{1,3})\"\)/;
+  const re = /rgb\(\"(\d{1,3}), (\d{1,3}), (\d{1,3})\"\)/;
 
-	return re.test(rgb);
+  return re.test(rgb);
 }
 
 /**
@@ -29,7 +29,8 @@ export function validateRGB(rgb: string) {
  */
 
 export function validateHSL(hsl: string) {
-	const re = /hsl\(\"\s*(\d+)\s*,\s*(\d+(?:\.\d+)?%)\s*,\s*(\d+(?:\.\d+)?%)\"\)/;
+  const re =
+    /hsl\(\"\s*(\d+)\s*,\s*(\d+(?:\.\d+)?%)\s*,\s*(\d+(?:\.\d+)?%)\"\)/;
 
-	return re.test(hsl);
+  return re.test(hsl);
 }
