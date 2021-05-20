@@ -1,19 +1,5 @@
-import { getContrast } from './colorContrast';
-import { HSLToHex, HSLToRGB, RGBToHSL, RGBToHex, hexToHSL, hexToRGB } from './colorConversion';
-import { separateHSL, separateRGB } from './colorSeparation';
-import { validateHSL, validateHex, validateRGB } from './colorValidators';
-
-export default {
-	getContrast,
-	HSLToHex,
-	HSLToRGB,
-	RGBToHSL,
-	RGBToHex,
-	hexToHSL,
-	hexToRGB,
-	separateHSL,
-	separateRGB,
-	validateHSL,
-	validateHex,
-	validateRGB,
-};
+export { generateRandomColor } from './randomColor';
+export { getContrast } from './colorContrast';
+export { HSLToHex, HSLToRGB, RGBToHSL, RGBToHex, hexToHSL, hexToRGB } from './colorConversion';
+export { separateHSL, separateRGB } from './colorSeparation';
+export { validateHSL, validateHex, validateRGB } from './colorValidators';
